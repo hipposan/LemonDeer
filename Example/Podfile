@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LemonDeer_Example' do
+  pod 'LemonDeer', :path => '../'
+
+  target 'LemonDeer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
