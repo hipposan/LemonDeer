@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/hipposan/LemonDeer/master/Resources/LemonDeer-logo.png" width=600 />
-  <p>Make m3u8 parse and download as a breeze.</p>
+  <p align="center">Make m3u8 parse and download as a breeze.</p>
 </p>
 
 <p align="center">
@@ -23,15 +23,17 @@
 
 ___________________
 
-|Features|
-|Parse and download m3u8 files|
-|Customize downloading progress|
-|Pure Swift|
-|Comprehensive Documents|
+Features|
+------------------------------- |
+Parse and download m3u8 files|
+Customize downloading progress|
+Pure Swift|
+Comprehensive Documents|
+
 
 ## Example
-
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
 
 ## Requirements
 * Xcode 8.0+
@@ -42,6 +44,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 > * Your m3u8 file should include **#EXFINT** information to make parse pass.
 > * Your local server's port should be **8080** to make local video play.
 
+
 ## Usage
 Define dowloading directory name:
 
@@ -50,6 +53,7 @@ let directoryName = "Name"
 let lemonDeer = LemonDeer(directoryName: directoryName)
 ```
 
+
 Parse and begin downloading m3u8 with URL:
 
 ```swift
@@ -57,6 +61,7 @@ let lemonDeer = LemonDeer(directoryName: "Demo")
 let url = "https://urlstring.m3u8"
 lemonDeer.parse(m3u8URL: url)
 ```
+
 
 Manipulate downloading process:
 * Pause
@@ -77,6 +82,7 @@ lemonDeer.downloader.resumeDownloadSegment()
 lemonDeer.downloader.cancelDownloadSegment()
 ```
 
+
 Delete downloaded contents
 * Delete a specific directory
 
@@ -89,6 +95,7 @@ lemonDeer.downloader.deleteDownloadedContents(with: ("DirectoryNameYouWantToDele
 ```swift
 lemonDeer.downloader.deleteAllDownloadedContents()
 ```
+
 
 Define your own after download succeeded
 
@@ -115,7 +122,6 @@ class YourClass: LemonDeerDelegate {
 ```
 
 ## Installation
-
 LemonDeer is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -124,9 +130,8 @@ pod "LemonDeer"
 ```
 
 ## Author
-
 Contact me at [Twitter](https://twitter.com/zzy0600).
 
-## License
 
+## License
 LemonDeer is available under the MIT license. See the LICENSE file for more info.
