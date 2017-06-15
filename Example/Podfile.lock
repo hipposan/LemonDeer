@@ -1,7 +1,17 @@
 PODS:
-  - LemonDeer (0.1.0)
+  - CocoaLumberjack/Default (3.2.0)
+  - CocoaLumberjack/Swift (3.2.0):
+    - CocoaLumberjack/Default
+  - GCDWebServer/Core (3.3.2)
+  - GCDWebServer/WebDAV (3.3.2):
+    - GCDWebServer/WebDAV/Core (= 3.3.2)
+  - GCDWebServer/WebDAV/Core (3.3.2):
+    - GCDWebServer/Core
+  - LemonDeer (1.0.0)
 
 DEPENDENCIES:
+  - CocoaLumberjack/Swift (~> 3.2.0)
+  - GCDWebServer/WebDAV (~> 3.0)
   - LemonDeer (from `../`)
 
 EXTERNAL SOURCES:
@@ -9,8 +19,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LemonDeer: dbdabd82a0d08708e204dd7a3d2421477e7c24cc
+  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
+  GCDWebServer: 2a375ec42839a41d7187d04e5b688d32fa5c4cd5
+  LemonDeer: 07c929de16a042a22b478fcd12297f89efa782f8
 
-PODFILE CHECKSUM: 820185cecc284924adc2ae400eb1fc7ab9acdd4f
+PODFILE CHECKSUM: 270343d20d2c1bbaef3325fa6019d3ba8ebc8218
 
 COCOAPODS: 1.2.1
