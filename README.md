@@ -1,4 +1,7 @@
-# LemonDeer
+<p align="center">
+  <img src="https://raw.githubusercontent.com/hipposan/LemonDeer/master/Resources/LemonDeer-logo.png" width=600 />
+</p>
+
 
 [![CI Status](http://img.shields.io/travis/hipposan/LemonDeer.svg?style=flat)](https://travis-ci.org/hipposan/LemonDeer)
 [![Version](https://img.shields.io/cocoapods/v/LemonDeer.svg?style=flat)](http://cocoapods.org/pods/LemonDeer)
