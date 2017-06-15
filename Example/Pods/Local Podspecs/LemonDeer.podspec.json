@@ -1,0 +1,22 @@
+{
+  "name": "LemonDeer",
+  "version": "0.1.0",
+  "summary": "A short description of LemonDeer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hipposan/LemonDeer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hipposan": "hippo_san@outlook.com"
+  },
+  "source": {
+    "git": "https://github.com/hipposan/LemonDeer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LemonDeer/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - LemonDeer (0.1.0)
+
+DEPENDENCIES:
+  - LemonDeer (from `../`)
+
+EXTERNAL SOURCES:
+  LemonDeer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LemonDeer: dbdabd82a0d08708e204dd7a3d2421477e7c24cc
+
+PODFILE CHECKSUM: 820185cecc284924adc2ae400eb1fc7ab9acdd4f
+
+COCOAPODS: 1.2.1
