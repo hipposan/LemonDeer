@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/hipposan/LemonDeer/master/Resources/LemonDeer-logo.png" width=600 />
-  <p align="center">Make m3u8 parse and download as a breeze.</p>
+  <p align="center"><i>Make m3u8 parse and download as white magic.</i></p>
 </p>
 
 <p align="center">
@@ -15,6 +15,9 @@
   </a>
   <a href="https://swift.org/">
     <img src="https://img.shields.io/badge/Swift-3.1-orange.svg" alt="Swift Version">
+  </a>
+  <a href="https://raw.githubusercontent.com/hipposan/LemonDeer/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License">
   </a>
    <a href="https://twitter.com/zzy0600">
     <img src="https://img.shields.io/badge/Twitter-%40zzy0600-blue.svg" alt="Twitter">
@@ -41,7 +44,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 * Swift 3.0+
 
 > **Note:**
-> * Your m3u8 file should include **#EXFINT** information to make parse pass.
+> * Your m3u8 file should include **#EXFINT** information to make parsing pass.
 > * Your local server's port should be **8080** to make local video play.
 
 
@@ -52,7 +55,7 @@ Define dowloading directory name:
 let directoryName = "Name"
 let lemonDeer = LemonDeer(directoryName: directoryName)
 ```
-
+____________
 
 Parse and begin downloading m3u8 with URL:
 
@@ -61,7 +64,7 @@ let lemonDeer = LemonDeer(directoryName: "Demo")
 let url = "https://urlstring.m3u8"
 lemonDeer.parse(m3u8URL: url)
 ```
-
+____________
 
 Manipulate downloading process:
 * Pause
@@ -81,7 +84,7 @@ lemonDeer.downloader.resumeDownloadSegment()
 ```swift
 lemonDeer.downloader.cancelDownloadSegment()
 ```
-
+____________
 
 Delete downloaded contents
 * Delete a specific directory
@@ -95,7 +98,7 @@ lemonDeer.downloader.deleteDownloadedContents(with: ("DirectoryNameYouWantToDele
 ```swift
 lemonDeer.downloader.deleteAllDownloadedContents()
 ```
-
+____________
 
 Define your own after download succeeded
 
