@@ -124,11 +124,25 @@ class YourClass: LemonDeerDelegate {
 ```
 
 ## Installation
-LemonDeer is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Installation with CocoaPods
+LemonDeer is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "LemonDeer"
+```
+
+### Installation with Swift Package Manager
+The Swift Package Manager is a tool for managing the distribution of Swift code. Just add the url of this repo to your `Package.swift` file as a dependency:
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YourPackage",
+    dependencies: [
+        .Package(url: "https://github.com/hipposan/LemonDeer.git", majorVersion: 1.0.0)
+    ]
+)
 ```
 
 ## Author
