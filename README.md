@@ -4,9 +4,6 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/hipposan/LemonDeer">
-    <img src="http://img.shields.io/travis/hipposan/LemonDeer.svg?style=flat" alt="Build Status">
-  </a>
   <a href="http://cocoapods.org/pods/LemonDeer">
     <img src="https://img.shields.io/cocoapods/v/LemonDeer.svg?colorB=7761c8" alt="Pods Version">
   </a>
@@ -24,6 +21,9 @@
   </a>
   <a href="https://raw.githubusercontent.com/hipposan/LemonDeer/master/LICENSE">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg?colorB=dfca6c" alt="License">
+  </a>
+   <a href="https://twitter.com/zzy0600">
+    <img src="https://img.shields.io/badge/Twitter-%40zzy0600-blue.svg" alt="Twitter">
   </a>
 </p>
 
