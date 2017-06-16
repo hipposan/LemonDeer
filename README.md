@@ -8,10 +8,10 @@
     <img src="http://img.shields.io/travis/hipposan/LemonDeer.svg?style=flat" alt="Build Status">
   </a>
   <a href="http://cocoapods.org/pods/LemonDeer">
-    <img src="https://img.shields.io/cocoapods/v/LemonDeer.svg?style=flat?colorB=7761c8" alt="Pods Version">
+    <img src="https://img.shields.io/cocoapods/v/LemonDeer.svg?colorB=7761c8" alt="Pods Version">
   </a>
   <a href="http://cocoapods.org/pods/LemonDeer">
-    <img src="https://img.shields.io/cocoapods/p/LemonDeer.svg?style=flat?colorB=cf649a" alt="Platforms">
+    <img src="https://img.shields.io/cocoapods/p/LemonDeer.svg?colorB=cf649a" alt="Platforms">
   </a>
   <a href="https://github.com/Carthage/Carthage">
     <img src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg" alt="Carthage">
@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/badge/Swift%20Package%20Manager-ready-orange.svg" alt="Swift Package Manager">
   </a>
   <a href="https://swift.org/">
-    <img src="https://img.shields.io/badge/Swift-3.1-orange.svg" alt="Swift Version">
+    <img src="https://img.shields.io/badge/Swift-3.0%2B-orange.svg" alt="Swift Version">
   </a>
   <a href="https://raw.githubusercontent.com/hipposan/LemonDeer/master/LICENSE">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg?colorB=dfca6c" alt="License">
