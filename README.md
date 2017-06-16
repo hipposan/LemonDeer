@@ -17,7 +17,7 @@
     <img src="https://img.shields.io/badge/Swift-3.1-orange.svg" alt="Swift Version">
   </a>
   <a href="https://raw.githubusercontent.com/hipposan/LemonDeer/master/LICENSE">
-    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg?colorB=dfca6c" alt="License">
   </a>
    <a href="https://twitter.com/zzy0600">
     <img src="https://img.shields.io/badge/Twitter-%40zzy0600-blue.svg" alt="Twitter">
