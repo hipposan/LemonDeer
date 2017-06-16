@@ -31,7 +31,6 @@ Features|
 Parse and download m3u8 files|
 Customize downloading progress|
 Pure Swift|
-Comprehensive Documents|
 
 
 ## Example

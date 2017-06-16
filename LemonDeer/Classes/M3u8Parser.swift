@@ -21,6 +21,11 @@ open class M3u8Parser {
   var tsPlaylist = M3u8Playlist()
   var identifier = ""
   
+  /**
+   To parse m3u8 file with a provided URL.
+   
+   - parameter url: A string of URL you want to parse.
+   */
   open func parse(with url: String) {
     guard let m3u8ParserDelegate = delegate else {
       print("M3u8ParserDelegate not set.")
