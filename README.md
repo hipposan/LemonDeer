@@ -131,6 +131,16 @@ LemonDeer is available through [CocoaPods](http://cocoapods.org). To install it,
 pod "LemonDeer"
 ```
 
+### Installation with Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods.
+
+To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage)
+
+#### Cartfile
+```
+github "hipposan/LemonDeer"
+```
+
 ### Installation with Swift Package Manager
 The Swift Package Manager is a tool for managing the distribution of Swift code. Just add the url of this repo to your `Package.swift` file as a dependency:
 
