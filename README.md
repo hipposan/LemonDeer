@@ -13,6 +13,12 @@
   <a href="http://cocoapods.org/pods/LemonDeer">
     <img src="https://img.shields.io/cocoapods/p/LemonDeer.svg?style=flat?colorB=cf649a" alt="Platforms">
   </a>
+  <a href="https://github.com/Carthage/Carthage">
+    <img src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg" alt="Carthage">
+  </a>
+  <a href="https://swift.org/package-manager/">
+    <img src="https://img.shields.io/badge/Swift%20Package%20Manager-ready-orange.svg" alt="Swift Package Manager">
+  </a>
   <a href="https://swift.org/">
     <img src="https://img.shields.io/badge/Swift-3.1-orange.svg" alt="Swift Version">
   </a>
