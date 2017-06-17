@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/hipposan/LemonDeer/master/Resources/LemonDeer-logo.png" width=600 />
-  <p align="center"><i>Make m3u8 parse and download as white magic.</i></p>
+  <p align="center"><i>Make m3u8 parse and video download as white magic.</i></p>
 </p>
 
 <p align="center">
