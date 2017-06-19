@@ -5,7 +5,6 @@ Carthage/Build
 Pods/
 examples/Pods
 examples/**/Pods
-examples/*.xcworkspace
 coverage/
 .coveralls.yml
 
@@ -61,16 +60,3 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-.build/
-
-### SwiftPackageManager ###
-Packages
-.build
-xcuserdata
-*.xcodeproj
