@@ -3,10 +3,9 @@ Carthage/Build
 
 ### CocoaPods ###
 Pods/
-examples/**/Podfile.lock
 examples/Pods
 examples/**/Pods
-examples/RelativePathProject/RelativePathProject/RelativePathProject.xcodeproj
+examples/*.xcworkspace
 coverage/
 .coveralls.yml
 
@@ -75,10 +74,3 @@ Packages
 .build
 xcuserdata
 *.xcodeproj
-
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
