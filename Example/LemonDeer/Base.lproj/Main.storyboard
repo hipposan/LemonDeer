@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xga-Q9-zBE">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="G4l-L4-VZT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="38Z-Zp-Di4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-Ry-Iqh">
-                                <rect key="frame" x="79.5" y="252" width="216" height="230"/>
+                                <rect key="frame" x="99" y="321.33333333333337" width="216" height="230.00000000000011"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPf-an-L8a">
                                         <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
@@ -60,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O33-vs-jPT">
-                                        <rect key="frame" x="0.0" y="200" width="216" height="30"/>
+                                        <rect key="frame" x="0.0" y="200.00000000000006" width="216" height="30"/>
                                         <state key="normal" title="Delete all downloaded contents">
                                             <color key="titleColor" red="1" green="0.1345357251" blue="0.23593979000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -71,29 +70,26 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6o-wV-ijo" userLabel="Progress Label">
-                                <rect key="frame" x="185.5" y="562.5" width="4.5" height="20.5"/>
+                                <rect key="frame" x="204.66666666666666" y="631.66666666666652" width="4.6666666666666856" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.4549019608" green="0.43921568630000002" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARJ-zu-b6q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="228" id="u8K-Cf-FDY"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="w6o-wV-ijo" firstAttribute="centerX" secondItem="1CN-Ry-Iqh" secondAttribute="centerX" id="1ut-MM-Wut"/>
                             <constraint firstItem="ARJ-zu-b6q" firstAttribute="leading" secondItem="38Z-Zp-Di4" secondAttribute="leading" id="AUo-zH-qk9"/>
-                            <constraint firstItem="1CN-Ry-Iqh" firstAttribute="centerY" secondItem="38Z-Zp-Di4" secondAttribute="centerY" multiplier="1.1" id="Ai8-et-YWO"/>
                             <constraint firstAttribute="trailing" secondItem="ARJ-zu-b6q" secondAttribute="trailing" id="EiK-vA-Wqv"/>
                             <constraint firstItem="w6o-wV-ijo" firstAttribute="centerX" secondItem="38Z-Zp-Di4" secondAttribute="centerX" id="TxC-QM-VK4"/>
                             <constraint firstItem="ARJ-zu-b6q" firstAttribute="top" secondItem="38Z-Zp-Di4" secondAttribute="top" id="b8j-xk-2i2"/>
                             <constraint firstItem="1CN-Ry-Iqh" firstAttribute="centerX" secondItem="38Z-Zp-Di4" secondAttribute="centerX" id="cKN-Zm-N6l"/>
-                            <constraint firstItem="w6o-wV-ijo" firstAttribute="top" secondItem="1CN-Ry-Iqh" secondAttribute="bottom" constant="80.670000000000002" id="lzz-mV-ng7"/>
+                            <constraint firstItem="1CN-Ry-Iqh" firstAttribute="top" secondItem="ARJ-zu-b6q" secondAttribute="bottom" constant="93.333333333333371" id="gC7-aI-LbA"/>
+                            <constraint firstItem="w6o-wV-ijo" firstAttribute="top" secondItem="1CN-Ry-Iqh" secondAttribute="bottom" constant="80.5" id="lXE-2C-4Mu"/>
+                            <constraint firstItem="G4l-L4-VZT" firstAttribute="top" secondItem="w6o-wV-ijo" secondAttribute="bottom" constant="84" id="yTM-fe-YZn"/>
                         </constraints>
                     </view>
                     <connections>
