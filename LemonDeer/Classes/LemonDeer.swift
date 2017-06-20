@@ -20,6 +20,7 @@ open class LemonDeer {
   let m3u8Parser = M3u8Parser()
   var playURL = ""
   var isM3u8 = false
+  var progress = ""
   
   public weak var delegate: LemonDeerDelegate?
   
@@ -58,6 +59,8 @@ extension LemonDeer: VideoDownloaderDelegate {
   }
   
   func updateProgressLabel(by percentage: String) {
+    progress = percentage
+    
     delegate?.updateProgressLabel(by: percentage)
   }
 }
