@@ -55,16 +55,21 @@ Define dowloading directory name:
 
 ```swift
 let directoryName = "Name"
-let lemonDeer = LemonDeer(directoryName: directoryName)
+let lemonDeer = LemonDeer()
+lemonDeer.directoryName = directoryName
 ```
 ____________
 
 Parse and begin downloading m3u8 with URL:
 
 ```swift
-let lemonDeer = LemonDeer(directoryName: "Demo")
+let directoryName = "Name"
+let lemonDeer = LemonDeer()
+lemonDeer.directoryName = directoryName
+
 let url = "https://urlstring.m3u8"
-lemonDeer.parse(m3u8URL: url)
+lemonDeer.m3u8URL = url
+lemonDeer.parse()
 ```
 ____________
 
@@ -122,7 +127,7 @@ Customize downloading progress
 
 ```swift
 class YourClass: LemonDeerDelegate {
-  func updateProgressLabel(by percentage: String)
+  func update(_ progress: Float, with directoryName: String) {}
 }
 ```
 

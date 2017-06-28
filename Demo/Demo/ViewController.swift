@@ -20,7 +20,7 @@ class ViewController: UIViewController {
   fileprivate var isDownloading = false
   fileprivate var duringDownloadingProcess = false
   
-  private let lemonDeer = LemonDeer(directoryName: "Demo")
+  private let lemonDeer = LemonDeer()
   private var server: GCDWebServer! = nil
   private var player = AVPlayer()
   private var playerLayer = AVPlayerLayer()
@@ -38,8 +38,10 @@ class ViewController: UIViewController {
       } else {
         let url = "http://pl-ali.youku.com/playlist/m3u8?ts=1497413452&keyframe=1&vid=704675076&type=hd2&sid=0497413452394200e1f61&token=8269&oip=1696929637&did=2739b348d6020958407ddebff48b76bd&ctype=20&ev=1&ep=yZa8BLwhkewm%2BJYwNpWin%2BP9q1Xl%2FcCHzQ80y23Oig6QzYfmciUxpx%2F65Yk1CRBd"
         
+        lemonDeer.directoryName = "Demo"
+        lemonDeer.m3u8URL = url
         lemonDeer.delegate = self
-        lemonDeer.parse(m3u8URL: url)
+        lemonDeer.parse()
       }
     } else {
       DispatchQueue.main.async {
@@ -120,7 +122,7 @@ extension ViewController: LemonDeerDelegate {
     print("Video download failed.")
   }
   
-  func update(_ progress: Float) {
+  func update(_ progress: Float, with directoryName: String) {
     progressLabel.text = "\(progress * 100) %"
   }
 }

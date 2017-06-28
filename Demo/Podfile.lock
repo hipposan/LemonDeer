@@ -7,7 +7,7 @@ PODS:
     - GCDWebServer/WebDAV/Core (= 3.3.2)
   - GCDWebServer/WebDAV/Core (3.3.2):
     - GCDWebServer/Core
-  - LemonDeer (1.0.2)
+  - LemonDeer (1.0.3)
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 3.2.0)
@@ -16,13 +16,13 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   LemonDeer:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
   GCDWebServer: 2a375ec42839a41d7187d04e5b688d32fa5c4cd5
-  LemonDeer: dec7e02c90ef2f87abe4ef9f4f9f03deb3b03dae
+  LemonDeer: c871306e11cca5cc53105fd30d94b1e8460563f1
 
 PODFILE CHECKSUM: 68812568e014cf7fdfd3ccf77acbeb7bda1ea0cf
 
-COCOAPODS: 1.3.0.beta.1
+COCOAPODS: 1.3.0.beta.2
