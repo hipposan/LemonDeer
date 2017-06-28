@@ -1,14 +1,8 @@
 use_frameworks!
 
-target 'LemonDeer_Example' do
+target 'Demo' do
   pod 'LemonDeer', :path => '../'
 
   pod 'CocoaLumberjack/Swift', "~> 3.2.0"
   pod "GCDWebServer/WebDAV", "~> 3.0"
-
-  target 'LemonDeer_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

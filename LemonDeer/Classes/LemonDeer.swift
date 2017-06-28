@@ -12,28 +12,31 @@ public protocol LemonDeerDelegate: class {
   func videoDownloadSucceeded()
   func videoDownloadFailed()
   
-  func updateProgressLabel(by percentage: String)
+  func update(_ progress: Float, with directoryName: String)
 }
 
 open class LemonDeer {
   public let downloader = VideoDownloader()
-  let m3u8Parser = M3u8Parser()
-  var playURL = ""
-  var isM3u8 = false
-  var progress = ""
+  public var progress: Float = 0.0
+  public var directoryName: String = "" {
+    didSet {
+      m3u8Parser.identifier = directoryName
+    }
+  }
+  public var m3u8URL = ""
+  
+  private let m3u8Parser = M3u8Parser()
   
   public weak var delegate: LemonDeerDelegate?
   
-  public init(directoryName: String) {
-    m3u8Parser.identifier = directoryName
+  public init() {
+    
   }
   
-  open func parse(m3u8URL: String) {
+  open func parse() {
     downloader.delegate = self
     m3u8Parser.delegate = self
     m3u8Parser.parse(with: m3u8URL)
-    
-    playURL = m3u8URL
   }
 }
 
@@ -58,9 +61,9 @@ extension LemonDeer: VideoDownloaderDelegate {
     delegate?.videoDownloadFailed()
   }
   
-  func updateProgressLabel(by percentage: String) {
-    progress = percentage
+  func update(_ progress: Float) {
+    self.progress = progress
     
-    delegate?.updateProgressLabel(by: percentage)
+    delegate?.update(progress, with: directoryName)
   }
 }

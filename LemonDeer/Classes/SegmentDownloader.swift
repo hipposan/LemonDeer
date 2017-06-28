@@ -28,8 +28,8 @@ class SegmentDownloader: NSObject {
   }()
   
   var downloadTask: URLSessionDownloadTask?
-  var resumeData: Data?
   var isDownloading = false
+  var finishedDownload = false
   
   var delegate: SegmentDownloaderDelegate?
   
@@ -43,10 +43,15 @@ class SegmentDownloader: NSObject {
   
   func startDownload() {
     if checkIfIsDownloaded() {
+      finishedDownload = true
+      
       delegate?.segmentDownloadSucceeded(with: self)
-      return
     } else {
-      downloadTask = downloadSession.downloadTask(with: URL(string: downloadURL)!)
+      let url = downloadURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+      
+      guard let taskURL = URL(string: url) else { return }
+
+      downloadTask = downloadSession.downloadTask(with: taskURL)
       downloadTask?.resume()
       isDownloading = true
     }
@@ -89,8 +94,10 @@ extension SegmentDownloader: URLSessionDownloadDelegate {
   func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
     let destinationURL = generateFilePath()
     
+    finishedDownload = true
+    isDownloading = false
+    
     if FileManager.default.fileExists(atPath: destinationURL.path) {
-      delegate?.segmentDownloadSucceeded(with: self)
       return
     } else {
       do {
@@ -104,6 +111,9 @@ extension SegmentDownloader: URLSessionDownloadDelegate {
   
   func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
     if error != nil {
+      finishedDownload = false
+      isDownloading = false
+      
       delegate?.segmentDownloadFailed(with: self)
     }
   }

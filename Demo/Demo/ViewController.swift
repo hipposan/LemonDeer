@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Demo
 //
-//  Created by hippo_san on 12/06/2017.
-//  Copyright © 2017 Ziyideas. All rights reserved.
+//  Created by Ziyi Zhang on 23/06/2017.
+//  Copyright © 2017 hippo_san. All rights reserved.
 //
 
 import UIKit
@@ -120,7 +120,7 @@ extension ViewController: LemonDeerDelegate {
     print("Video download failed.")
   }
   
-  func updateProgressLabel(by percentage: String) {
-    progressLabel.text = percentage
+  func update(_ progress: Float) {
+    progressLabel.text = "\(progress * 100) %"
   }
 }

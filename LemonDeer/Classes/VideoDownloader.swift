@@ -8,28 +8,38 @@
 
 import Foundation
 
+public enum Status {
+  case started
+  case paused
+  case canceled
+  case finished
+}
+
 protocol VideoDownloaderDelegate {
   func videoDownloadSucceeded(by downloader: VideoDownloader)
   func videoDownloadFailed(by downloader: VideoDownloader)
   
-  func updateProgressLabel(by percentage: String)
+  func update(_ progress: Float)
 }
 
 open class VideoDownloader {
+  public var downloadStatus: Status = .paused
+  
   var m3u8Data: String = ""
   var tsPlaylist = M3u8Playlist()
   var segmentDownloaders = [SegmentDownloader]()
   var tsFilesIndex = 0
-  var downloadedTsFilesCount = 0
   var neededDownloadTsFilesCount = 0
   var downloadURLs = [String]()
-  var downloadingProgress: String {
-    let fraction: Float = Float((Float(downloadedTsFilesCount) / Float(neededDownloadTsFilesCount)) * 100)
-    let roundedValue: Int = Int(fraction.rounded(.toNearestOrEven))
-    let progressString = roundedValue.description + " %"
+  var downloadingProgress: Float {
+    let finishedDownloadFilesCount = segmentDownloaders.filter({ $0.finishedDownload == true }).count
+    let fraction = Float(finishedDownloadFilesCount) / Float(neededDownloadTsFilesCount)
+    let roundedValue = round(fraction * 100) / 100
     
-    return progressString
+    return roundedValue
   }
+  
+  fileprivate var startDownloadIndex = 2
   
   var delegate: VideoDownloaderDelegate?
   
@@ -39,7 +49,7 @@ open class VideoDownloader {
     var newSegmentArray = [M3u8TsSegmentModel]()
     
     let notInDownloadList = tsPlaylist.tsSegmentArray.filter { !downloadURLs.contains($0.locationURL) }
-    neededDownloadTsFilesCount = notInDownloadList.count
+    neededDownloadTsFilesCount = tsPlaylist.length
     
     for i in 0 ..< notInDownloadList.count {
       let fileName = "\(tsFilesIndex).ts"
@@ -62,10 +72,18 @@ open class VideoDownloader {
       
       tsPlaylist.tsSegmentArray = newSegmentArray
       
-      segmentDownloaders[i].startDownload()
-      
       tsFilesIndex += 1
     }
+    
+    segmentDownloaders[0].startDownload()
+    segmentDownloaders[1].startDownload()
+    segmentDownloaders[2].startDownload()
+    
+    downloadStatus = .started
+  }
+  
+  func checkDownloadQueue() {
+    
   }
   
   func updateLocalM3U8file() {
@@ -121,29 +139,48 @@ open class VideoDownloader {
   
   open func pauseDownloadSegment() {
     _ = segmentDownloaders.map { $0.pauseDownload() }
+    
+    downloadStatus = .paused
   }
   
   open func cancelDownloadSegment() {
     _ = segmentDownloaders.map { $0.cancelDownload() }
+    
+    downloadStatus = .canceled
   }
   
   open func resumeDownloadSegment() {
     _ = segmentDownloaders.map { $0.resumeDownload() }
+    
+    downloadStatus = .started
   }
 }
 
 extension VideoDownloader: SegmentDownloaderDelegate {
   func segmentDownloadSucceeded(with downloader: SegmentDownloader) {
-    downloadedTsFilesCount += 1
-
+    let finishedDownloadFilesCount = segmentDownloaders.filter({ $0.finishedDownload == true }).count
+    
     DispatchQueue.main.async {
-      self.delegate?.updateProgressLabel(by: self.downloadingProgress)
+      self.delegate?.update(self.downloadingProgress)
     }
-
+    
     updateLocalM3U8file()
-
-    if downloadedTsFilesCount == neededDownloadTsFilesCount {
+    
+    let downloadingFilesCount = segmentDownloaders.filter({ $0.isDownloading == true }).count
+    
+    if finishedDownloadFilesCount == neededDownloadTsFilesCount {
       delegate?.videoDownloadSucceeded(by: self)
+      
+      downloadStatus = .finished
+    } else if startDownloadIndex == neededDownloadTsFilesCount - 1 {
+      if segmentDownloaders[startDownloadIndex].isDownloading == true { return }
+    }
+    else if downloadingFilesCount < 3 || finishedDownloadFilesCount != neededDownloadTsFilesCount {
+      if startDownloadIndex < neededDownloadTsFilesCount - 1 {
+        startDownloadIndex += 1
+      }
+      
+      segmentDownloaders[startDownloadIndex].startDownload()
     }
   }
   

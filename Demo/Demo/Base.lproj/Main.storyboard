@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A291j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ncK-h5-im2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0PX-72-sF4">
+            <objects>
+                <viewController id="ncK-h5-im2" customClass="ViewController" customModule="LemonDeer_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hkh-Kc-cwz"/>
+                        <viewControllerLayoutGuide type="bottom" id="5wB-UD-8zX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LNh-lA-nTg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vS7-rk-sEI">
+                                <rect key="frame" x="79.5" y="252" width="216" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-s2-QI7">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
+                                        <state key="normal" title="Download"/>
+                                        <connections>
+                                            <action selector="download:" destination="ncK-h5-im2" eventType="touchUpInside" id="slu-8w-h3M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3o-wu-iVY">
+                                        <rect key="frame" x="0.0" y="50" width="216" height="30"/>
+                                        <state key="normal" title="Play online video">
+                                            <color key="titleColor" red="1" green="0.090010747870000005" blue="0.98158211390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playOnlineVideo:" destination="ncK-h5-im2" eventType="touchUpInside" id="VLd-8L-VjL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpX-mO-Gcz">
+                                        <rect key="frame" x="0.0" y="100" width="216" height="30"/>
+                                        <state key="normal" title="Play local video">
+                                            <color key="titleColor" red="0.26552138479999998" green="0.20514784959999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playLocalVideo:" destination="ncK-h5-im2" eventType="touchUpInside" id="dGE-H1-ogV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lll-hR-8ab">
+                                        <rect key="frame" x="0.0" y="150" width="216" height="30"/>
+                                        <state key="normal" title="Delete content with name">
+                                            <color key="titleColor" red="1" green="0.41838150330000001" blue="0.27750421510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteContentWithName:" destination="ncK-h5-im2" eventType="touchUpInside" id="31F-5L-eeC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dps-Qu-1z1">
+                                        <rect key="frame" x="0.0" y="200" width="216" height="30"/>
+                                        <state key="normal" title="Delete all downloaded contents">
+                                            <color key="titleColor" red="1" green="0.1345357251" blue="0.23593979000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteDownloadedContents:" destination="ncK-h5-im2" eventType="touchUpInside" id="F8I-si-vpE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-aH-mdi" userLabel="Progress Label">
+                                <rect key="frame" x="185.5" y="562.5" width="4.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.4549019608" green="0.43921568630000002" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-Ql-Prd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vS7-rk-sEI" firstAttribute="centerX" secondItem="LNh-lA-nTg" secondAttribute="centerX" id="DFX-BY-AKC"/>
+                            <constraint firstItem="vS7-rk-sEI" firstAttribute="top" secondItem="Y0o-Ql-Prd" secondAttribute="bottom" constant="93.333333333333371" id="EdH-hh-p2T"/>
+                            <constraint firstItem="Y0o-Ql-Prd" firstAttribute="top" secondItem="LNh-lA-nTg" secondAttribute="top" id="EoC-5V-P02"/>
+                            <constraint firstItem="M9X-aH-mdi" firstAttribute="top" secondItem="vS7-rk-sEI" secondAttribute="bottom" constant="80.5" id="Fp6-dG-ln9"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0o-Ql-Prd" secondAttribute="trailing" id="MLS-fb-kx6"/>
+                            <constraint firstItem="Y0o-Ql-Prd" firstAttribute="leading" secondItem="LNh-lA-nTg" secondAttribute="leading" id="bSc-rF-5wQ"/>
+                            <constraint firstItem="M9X-aH-mdi" firstAttribute="centerX" secondItem="LNh-lA-nTg" secondAttribute="centerX" id="jjq-6X-QPs"/>
+                            <constraint firstItem="5wB-UD-8zX" firstAttribute="top" secondItem="M9X-aH-mdi" secondAttribute="bottom" constant="84" id="oST-Iq-IUr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="Qj5-s2-QI7" id="R6J-CL-DBJ"/>
+                        <outlet property="playerView" destination="Y0o-Ql-Prd" id="z8I-Zh-5Sr"/>
+                        <outlet property="progressLabel" destination="M9X-aH-mdi" id="WD8-QN-gpU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lp5-o6-Oau" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="39.945652173913047"/>
+        </scene>
+    </scenes>
+</document>

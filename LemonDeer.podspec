@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LemonDeer'
-  s.version          = '1.0.1'
+  s.version          = '1.0.3'
   s.summary          = 'Make m3u8 parse and download as a breeze.'
 
   s.description      = <<-DESC
